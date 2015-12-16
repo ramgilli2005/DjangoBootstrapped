@@ -38,7 +38,7 @@ public class LoginDAO implements ServiceConstants{
 		
 		log.info("Check: " + ud.getName());
 		
-		if(ud != null && ud.getName() != null){
+		if(ud != null && ud.getPassword().equals(req.getPassword())){
 			return true;
 		}
 			
