@@ -32,10 +32,10 @@
 <div class="wrapper col3">
   <div id="topnav">
     <ul>
-      <li class="active"><a href="home.jsp">Homepage</a></li>
-      <li><a href="products.jsp">Products</a></li>
-      <li><a href="orders.jsp">Order History</a></li>
-      <li><a href="cart.jsp">Shopping Cart</a></li>
+      <li class="active"><a href="home.html">Homepage</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="orders.html">Order History</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
       <br class="clear" />
   </div>
 </div>
@@ -84,8 +84,8 @@
 <div  class="wrapper col5">
   <div id="container">
     <div id="content">
-      <h2>Car Dealership Company</h2>
-      <img class="imgl" src="4.jpg" alt="" width="125" height="125" />
+      <h2>About Django Bootstrapped</h2>
+      <img class="imgl" src="../assets/eshopping.jpg" alt="" width="125" height="125" />
       <p><strong>The best we sell</strong></p>
       <p>Our car dealership was started in 1980 and since then we sell the best in class cars and accessories </p>
       <p>We serve to make your dream a reality by helping you buy the best cars for the least price in the market </p>

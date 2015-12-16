@@ -1,5 +1,8 @@
-com/wpl/controller/HomeController.class
+com/wpl/controller/OrderHistoryController.class
 com/wpl/DAO/LoginDAO.class
-com/wpl/model/UserDetails.class
 com/wpl/servicehelper/ServiceConstants.class
 com/wpl/controller/LoginController.class
+com/wpl/controller/ProductController.class
+com/wpl/controller/HomeController.class
+com/wpl/controller/CheckoutController.class
+com/wpl/model/UserDetails.class
