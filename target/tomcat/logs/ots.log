@@ -1,4 +1,1 @@
-13-12-2015 03:11:32 com.wpl.controller.LoginController.getLoginPage(LoginController.java:30) - Entered Login Controller - GET method
-13-12-2015 03:11:39 com.wpl.controller.LoginController.checkLogin(LoginController.java:40) - Login Controller POST
-13-12-2015 03:11:41 com.wpl.DAO.LoginDAO.checkLoginDAO(LoginDAO.java:39) - Check: Gohan
-13-12-2015 03:11:41 com.wpl.controller.LoginController.checkLogin(LoginController.java:46) - User Validated Successfully
+16-12-2015 04:50:52 com.wpl.controller.HomeController.getLoginPage(HomeController.java:27) - Entered Login Controller - GET method
