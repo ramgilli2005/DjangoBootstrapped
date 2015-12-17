@@ -1,5 +1,8 @@
-com/wpl/controller/OrderHistoryController.class
+com/wpl/model/Product.class
 com/wpl/DAO/LoginDAO.class
+com/wpl/controller/OrderHistoryController.class
+com/wpl/DAO/ProductDAO.class
+com/wpl/controller/JSONControllers.class
 com/wpl/servicehelper/ServiceConstants.class
 com/wpl/controller/LoginController.class
 com/wpl/controller/ProductController.class

@@ -23,7 +23,7 @@
 <div class="wrapper col2">
   <div id="header">
     <div class="fl_left">
-      <h1><a href="home.jsp">Django Bootstrapped</a></h1>
+      <h1><a href="home.html">Django Bootstrapped</a></h1>
     </div>
     <br class="clear" />
   </div>

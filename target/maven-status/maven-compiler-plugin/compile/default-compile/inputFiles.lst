@@ -3,6 +3,9 @@
 /Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/controller/OrderHistoryController.java
 /Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/servicehelper/ServiceConstants.java
 /Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/controller/LoginController.java
+/Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/DAO/ProductDAO.java
 /Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/DAO/LoginDAO.java
 /Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/controller/ProductController.java
+/Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/controller/JSONControllers.java
+/Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/model/Product.java
 /Users/vigneshvenkataraman/git/DjangoBootstrapped/src/main/java/com/wpl/controller/HomeController.java
