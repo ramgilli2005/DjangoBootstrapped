@@ -2,6 +2,7 @@ package com.wpl.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,11 +42,16 @@ public class LoginController {
 		UserDetails daoReq = new UserDetails();
 		daoReq.setUserName(req.getParameter("inputEmail").toString());
 		daoReq.setPassword(req.getParameter("inputPassword").toString());
-		
-		if(loginDao.checkLoginDAO(daoReq)){
+		UserDetails ud =loginDao.checkLoginDAO(daoReq);
+		if(ud != null && ud.getPassword().equals(daoReq.getPassword())){
 			log.info("User Validated Successfully");
+			HttpSession session = req.getSession();
+			session.setAttribute("userName", ud.getUserName());
+			session.setAttribute("name", ud.getName());
 			return "home";
 		}
+		
+		
 		
 		return "login";
 	}

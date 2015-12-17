@@ -1,7 +1,5 @@
 package com.wpl.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.wpl.DAO.ProductDAO;
-import com.wpl.model.Product;
 
 @Controller
 @RequestMapping("products.html")
@@ -30,8 +27,6 @@ public class ProductController {
 		
 		log.info("Entered Product Controller - GET method");
 		// Add values to model to be accessed in the JSP page
-		List<Product> products = dao.getProdDAO();
-		model.addAttribute("products", products);
 		// Return the name of the JSP page to be displayed
 		return "products";
 	}
