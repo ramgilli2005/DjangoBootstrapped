@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.wpl.model.Order;
+import com.wpl.model.Pay;
 import com.wpl.servicehelper.ServiceConstants;
 
 @Component
@@ -35,6 +36,20 @@ public class OrderDAO implements ServiceConstants{
 		Order[] order = rt.postForObject(SERVICE_URI+ORDER_SEARCH, entity, Order[].class);
 		
 		return Arrays.asList(order);
+	}
+	
+	public String saveOrder(Order order){
+		HttpEntity entity = new HttpEntity(order, header);
+		String orderId = rt.postForObject(SERVICE_URI+"order/save", entity, String.class);
+		
+		return orderId;
+	}
+	
+	public String savePay(Pay pay){
+		HttpEntity entity = new HttpEntity(pay, header);
+		String orderId = rt.postForObject(SERVICE_URI+"payment/save", entity, String.class);
+		
+		return "Saved";
 	}
 	
 	

@@ -17,6 +17,7 @@ import com.wpl.DAO.OrderDAO;
 import com.wpl.DAO.ProductDAO;
 import com.wpl.DAO.UserDAO;
 import com.wpl.model.Order;
+import com.wpl.model.Pay;
 import com.wpl.model.Product;
 import com.wpl.model.User;
 
@@ -61,6 +62,30 @@ private static final Logger log = Logger.getLogger(LoginController.class);
 
 		return order;
 	}
+	
+	@RequestMapping(value="/placeorder", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody String placeOrder(@RequestBody Order order, HttpSession session){
+		
+		log.info("Product Controller POST");
+		
+		order.setUserName(session.getAttribute("userName").toString());
+		order.setOrderStatus("CONFIRMED");
+		String orderId = oDao.saveOrder(order);
+		
+		return orderId;
+	}
+	
+	@RequestMapping(value="/pay_details", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody String payment(@RequestBody Pay pay, HttpSession session){
+		
+		log.info("Product Controller POST");
+		pay.setUserName(session.getAttribute("userName").toString());
+		pay.setPaymentStatus("SUCCESS");
+		String status = oDao.savePay(pay);
+		
+		return "DONE";
+	}
+	
 	
 	
 	
