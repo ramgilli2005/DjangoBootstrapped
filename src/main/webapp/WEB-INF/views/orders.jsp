@@ -9,8 +9,29 @@
 <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="../js/jquery.jcarousel.setup.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Order History</title>
+<script>
+$(document).ready(function(){
+	
+	$.ajax({
+	type:"POST",
+    url: "getjson/order",
+    contentType:"application/json; charset=utf-8",
+	dataType: "JSON",
+    data: JSON.stringify({}),
+    success: function(res){
+    	for(i=0;i<res.length;i++){
+    		
+                    $("#div2").append("<table><tr><td style=color:black;>"+res[i].orderId+"</td><td style=color:black;>"+res[i].userName+"</td><td style=color:black;>"+res[i].productId+"</td><td style=color:black;>"+res[i].productQty+"</td><td style=color:black;>"+res[i].totalPrice+"</td><td style=color:black;>"+res[i].orderStatus+"</td></tr></table>");
+    	}
+                      },
+    error:function(jqXHR, textStatus, errorThrown){
+                     alert("error");
+                      }
+           });
+	
+});
+</script>
 </head>
 <body>
 <div class="wrapper col1">

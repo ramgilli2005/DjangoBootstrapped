@@ -1,17 +1,76 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <link rel="stylesheet" href="../css/layout.css" type="text/css" />
+<link rel="stylesheet" href="../css/display.css" type="text/css" />
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/jquery.jcarousel.pack.js"></script>
 <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="../js/jquery.jcarousel.setup.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script>
+$(document).ready(function(){
+	
+	$.ajax({
+	type:"POST",
+    url: "getjson/prod_search",
+    contentType:"application/json; charset=utf-8",
+	dataType: "JSON",
+    data: JSON.stringify({}),
+    success: function(data){
+    	for(i=0;i<data.length;i++){
+    		 $("#div3").append("<table><tr><td><input type=radio name=productname value="+data[i].productName+" onchange=setting(this)></td><td style=color:black;><img class=productsimage src=../assets/"+data[i].productImg+"\></td><td class=prodname style=color:black;>"+data[i].productName+"</td><td style=color:black;>"+data[i].productPrice+"</td></tr></table>");
+    	}
+    	
+                      }
+           });
+	$("#btn1").click(function(){
+		getProductSearch();
+		
+	
+})
+
+});
+
+function setting(ide){
+	var produname=ide.value;
+alert(produname);
+$.cookie("productnames", produname, { path: '/', expires: 7 });
+window.location.href = "cart.html";
+}
+</script>
+<script>
+
+	function getProductSearch(){
+		
+		var searchvalue=$("#searchValue").val();
+		var obj = new Object();
+		obj.productName = searchvalue;
+		$.ajax({
+			type:"POST",
+		    url: "getjson/prod_search",
+		    contentType:"application/json; charset=utf-8",
+			dataType: "JSON",
+		    data: JSON.stringify(obj),
+		    success: function(dataa){
+		    	
+		    	for(i=0;i<dataa.length;i++){
+		                    $("#div4").append("<table><tr><td style=color:black;><img class=productsimage src=../assets/"+dataa[i].productImg+"\></td><td class=prodname style=color:black;>"+dataa[i].productName+"</td><td style=color:black;>"+dataa[i].productPrice+"</td></tr></table>");
+		                    
+		    	}
+		    	
+		    	
+		                      },
+		    error:function(jqXHR, textStatus, errorThrown){
+		                     alert("error");
+		                      }
+		           });
+		
+	}
+	
+	
+</script>
 </head>
 <body>
 <div class="wrapper col1">
@@ -52,7 +111,7 @@
 </div>
 <div id="div2">
 <form>
-Serach: <input type="text" id="name">
+Search: <input type="text" id="searchValue">
 <br/>
 Category:
 <select id ="category">
@@ -61,14 +120,15 @@ Category:
 <option>books</option>
 </select>
 <br/>
+<input type="submit" id="btn1">
 
-<button type="button" class="btn btn-lg btn-primary btn-block" onclick=getProducts()>Submit</button>
 </form>
 </div>
 <br/>
+<div id="div4">
+</div>
+<br/>
 <div id="div3">
-
-${model.products}
 
 </div>
 
@@ -104,4 +164,5 @@ ${model.products}
   </div>
 </div>
 </body>
+
 </html>

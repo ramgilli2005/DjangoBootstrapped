@@ -60,36 +60,14 @@
     <a href="javascript:void(0);" id="featured-item-prev"><img src="../assets/prev.png" alt="" /></a> <a href="javascript:void(0);" id="featured-item-next"><img src="../assets/next.png" alt="" /></a> </div>
 </div>
 <!-- ####################################################################################################### -->
-<!-- ####################################################################################################### -->
-<div class="wrapper col4">
-  <div id="featured_slide">
-    <div id="featured_content">
-    	<h2>Most Viewed</h2>	
-	       <ul>
-	        <li><a href="#"><img src="../assets/bag.jpg" alt="Swiss Army Bag (20% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/macbook.jpg" alt="Mac Book Pro (10% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/hairdryer.jpg" alt="Hair Dryer (5% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/harrypotterbooks.jpg" alt="Harry Potter Series(30% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/mouse.jpg" alt="Gamin mouse(2% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/studylamp.jpg" alt="Lamp (25% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/gameofthronesbooks.jpg" alt="Game Of Thrones Series(15% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/perfume.jpg" alt="Poison(5% off)" /></a></li>
-	        <li><a href="#"><img src="../assets/ipad.jpg" alt="Ipad Pro(3%off)" /></a></li>
-	        <li><a href="#"><img src="../assets/watch.jpg" alt="Watch(8% off)" /></a></li>
-	      </ul>
-    </div>
-    <a href="javascript:void(0);" id="featured-item-prev"><img src="layout/images/prev.png" alt="" /></a> <a href="javascript:void(0);" id="featured-item-next"><img src="layout/images/next.png" alt="" /></a> </div>
-</div>
-<!-- ####################################################################################################### -->
+
 <div  class="wrapper col5">
   <div id="container">
     <div id="content">
       <h2>About Django Bootstrapped</h2>
       <img class="imgl" src="../assets/eshopping.jpg" alt="" width="125" height="125" />
       <p><strong>The best we sell</strong></p>
-      <p>Our car dealership was started in 1980 and since then we sell the best in class cars and accessories </p>
-      <p>We serve to make your dream a reality by helping you buy the best cars for the least price in the market </p>
-      <p>Order you car today and get unbelievable discounts</p>
+      
     </div>
     <br class="clear" />
     <br class="clear" />
