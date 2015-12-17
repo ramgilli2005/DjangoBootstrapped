@@ -34,7 +34,7 @@ public class ProductDAO implements ServiceConstants{
 		HttpEntity entity = new HttpEntity(new Product(), header);
 		Product[] prodArr = rt.postForObject(SERVICE_URI+PRODUCT_SEARCH, entity, Product[].class);
 		List<Product> prodList = Arrays.asList(prodArr);
-		log.info("Prod Name: "+prodList.get(0).getProductName() +" Price: "+prodList.get(0).getProductPrice());
+		//log.info("Prod Name: "+prodList.get(0).getProductName() +" Price: "+prodList.get(0).getProductPrice());
 		for(Product prod : prodList){
 			prod.setProductImg(prod.getProductName().toLowerCase().concat(".jpg"));
 		}
@@ -46,7 +46,7 @@ public class ProductDAO implements ServiceConstants{
 		HttpEntity entity = new HttpEntity(p, header);
 		Product[] prodArr = rt.postForObject(SERVICE_URI+PRODUCT_SEARCH, entity, Product[].class);
 		List<Product> prodList = Arrays.asList(prodArr);
-		log.info("Prod Name: "+prodList.get(0).getProductName() +" Price: "+prodList.get(0).getProductPrice());
+		//log.info("Prod Name: "+prodList.get(0).getProductName() +" Price: "+prodList.get(0).getProductPrice());
 		for(Product prod : prodList){
 			prod.setProductImg(prod.getProductName().toLowerCase().concat(".jpg"));
 		}

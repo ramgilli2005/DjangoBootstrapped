@@ -38,7 +38,7 @@ $(document).ready(function(){
   <div id="topbar">
     <span style="float:right;"><a href="contact.html">Contact Us|</a>
     <a href="contact.html">Hi|</a>
-    <a href="contact.html">logout</a></span>
+    <a href="logout.html">logout</a></span>
     <br class="clear" />
   </div>
 </div>

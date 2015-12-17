@@ -13,11 +13,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Shopping Cart</title>
 <script>
-$(document).ready(function(){
-		session.getAttribute("productname");
-		alert(prodname);	
+$(document).ready(function(){	
 		var searchkey=$.cookie("productnames");
-		 alert(searchkey);
+		if(searchkey == ""){
+			alert("Cart is empty!");
+			window.location.href = "home.html";
+		}
+		 //alert(searchkey);
 		 $.ajax({
 				type:"POST",
 			    url: "getjson/prod_search",
@@ -28,7 +30,9 @@ $(document).ready(function(){
 			    	for(i=0;i<data.length;i++){
 			    		if(data[i].productName==searchkey)
 			    		{	
-			    		$("#div2").append("<table><tr><th>Add to cart</th><th>Image</th><th>name</th><th>Description</th><th>Price</th></tr><tr><td><input type=radio name=tocart value="+data[i].productName+" onchange=selectCart(this)/></td><td style=color:black;><img class=productsimage src=../assets/"+data[i].productImg+"\></td><td class=prodname style=color:black;>"+data[i].productName+"</td><td style=color:black;>"+data[i].productDescription+"</td><td style=color:black;>"+data[i].productPrice+"</td></tr></table>");
+			    		$("#div2").append("<table><tr><th>Image</th><th>name</th><th>Description</th><th>Price</th></tr><tr><td style=color:black;><img class=productsimage src=../assets/"+data[i].productImg+"\></td><td class=prodname style=color:black;>"+data[i].productName+"</td><td style=color:black;>"+data[i].productDescription+"</td><td style=color:black;>"+data[i].productPrice+"</td></tr></table>");
+			    		$("#prod_id").val(data[i].productName);
+			    		$("#prod_id").hide();
 			    		break;
 			    		}
 			    	}
@@ -42,6 +46,18 @@ $(document).ready(function(){
 			$.cookie("cartproductnames", cartproduname, { path: '/', expires: 7 });
 			window.location.href = "cart.html";
 			}
+			
+			$("#submitBut").click(function(){
+				alert("Your order has been Placed!")
+			});
+			$("#cart_empty").click(function(){
+				$.cookie("productnames", "", { path: '/', expires: 7 });
+				alert("Cart Emptied");
+				window.location.href = "products.html";
+				
+			});
+			
+			
 	});
 	
 
@@ -52,7 +68,7 @@ $(document).ready(function(){
   <div id="topbar">
     <span style="float:right;"><a href="contact.html">Contact Us|</a>
     <a href="contact.html">Hi|</a>
-    <a href="contact.html">logout</a></span>
+    <a href="logout.html">logout</a></span>
     <br class="clear" />
   </div>
 </div>
@@ -86,9 +102,31 @@ $(document).ready(function(){
 Your Cart
 
 </div>
+<form id="form1" method="post">
 <div id="div2">
 
 </div>
+<div id="div3">
+<input type="text" name="prod_id" id="prod_id" />
+<h3> <input type='button' value='Empty Cart' id='cart_empty' /> </h3>
+<br/>
+<h2>Card Information</h2>
+<input type="text" name="card" placeholder="Card Number" /> <br/><br/>
+<input type="text" name="expiry" placeholder="Valid Thru" />
+<input type="text" name="cvv" placeholder="CVV" /> <br/><br/>
+<input type="text" name="name" placeholder="Name" />
+<br/>
+<br/>
+<h2>Shipping Information</h2>
+<h4>Name : <input type="text" name="sname" placeholder="Name" value="Test"/> <br/><br/><br/>
+Address : <input type="text" name="saddr" placeholder="Address" value="601 W Renner Rd"/> <br/><br/><br/>
+Address 2 :<input type="text" name="saddr2" placeholder="Address" value="Apt #120"/> <br/><br/><br/>
+City/State : <input type="text" name="cvv" placeholder="CVV" value="Richardson, TX"/> <br/><br/><br/>
+Zipcode : <input type="text" name="name" placeholder="Name" value="75080"/> <br/><br/><br/></h4>
+</div>
+<br/>
+<input type="submit" value="Place Order" id="submitBut"/>
+</form>
   </div>
     
     </div>

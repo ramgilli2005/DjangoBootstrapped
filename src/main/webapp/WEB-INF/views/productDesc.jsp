@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 <script>
 $(document).ready(function(){
-	 var searchkey=$.cookie("productnames");
+	 var searchkeys=$.cookie("productnames");
 	 alert(searchkey);
 	 $.ajax({
 			type:"POST",

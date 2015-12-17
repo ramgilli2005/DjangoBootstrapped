@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 function setting(ide){
 	var produname=ide.value;
-alert(produname);
+//alert(produname);
 $.cookie("productnames", produname, { path: '/', expires: 7 });
 window.location.href = "cart.html";
 }
@@ -56,14 +56,18 @@ window.location.href = "cart.html";
 		    success: function(dataa){
 		    	
 		    	for(i=0;i<dataa.length;i++){
-		                    $("#div4").append("<table><tr><td style=color:black;><img class=productsimage src=../assets/"+dataa[i].productImg+"\></td><td class=prodname style=color:black;>"+dataa[i].productName+"</td><td style=color:black;>"+dataa[i].productPrice+"</td></tr></table>");
+		    		$("#div3").empty();
+		                    $("#div3").append("<table><tr><td><input type=radio name=productname value="+dataa[i].productName+" onchange=setting(this)></td><td style=color:black;><img class=productsimage src=../assets/"+dataa[i].productImg+"\></td><td class=prodname style=color:black;>"+dataa[i].productName+"</td><td style=color:black;>"+dataa[i].productPrice+"</td></tr></table>");
 		                    
+		    	}
+		    	if(dataa.length==0){
+		    		alert("No item Found");
 		    	}
 		    	
 		    	
 		                      },
 		    error:function(jqXHR, textStatus, errorThrown){
-		                     alert("error");
+		                     alert("No item Found");
 		                      }
 		           });
 		
@@ -77,7 +81,7 @@ window.location.href = "cart.html";
   <div id="topbar">
     <span style="float:right;"><a href="contact.html">Contact Us|</a>
     <a href="contact.html">Hi|</a>
-    <a href="contact.html">logout</a></span>
+    <a href="logout.html">logout</a></span>
     <br class="clear" />
   </div>
 </div>
@@ -120,7 +124,7 @@ Category:
 <option>books</option>
 </select>
 <br/>
-<input type="submit" id="btn1">
+<input type="button" id="btn1" value="Search">
 
 </form>
 </div>

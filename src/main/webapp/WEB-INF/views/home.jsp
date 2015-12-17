@@ -15,8 +15,8 @@
 <div class="wrapper col1">
   <div id="topbar">
     <span style="float:right;"><a href="contact.html">Contact Us|</a>
-    <a href="contact.html">Hi|</a>
-    <a href="contact.html">logout</a></span>
+    <a href="#">Hi Gohan |</a>
+    <a href="logout.html">logout</a></span>
     <br class="clear" /></span>
   </div>
 </div>
@@ -65,9 +65,12 @@
   <div id="container">
     <div id="content">
       <h2>About Django Bootstrapped</h2>
+      
       <img class="imgl" src="../assets/eshopping.jpg" alt="" width="125" height="125" />
       <p><strong>The best we sell</strong></p>
-      
+      <p>We sell over 50,000 products through our website. Our products are certified
+      for world class quality. The sellers in our webiste are 100% authentic and certified
+      </p>
     </div>
     <br class="clear" />
     <br class="clear" />

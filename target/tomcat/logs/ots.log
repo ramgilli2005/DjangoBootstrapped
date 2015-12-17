@@ -1,15 +1,15 @@
-16-12-2015 18:55:49 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
-16-12-2015 18:55:49 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
-16-12-2015 19:07:35 com.wpl.controller.OrderHistoryController.getLoginPage(OrderHistoryController.java:23) - Entered Order Controller - GET method
-16-12-2015 19:07:36 com.wpl.controller.CheckoutController.getLoginPage(CheckoutController.java:23) - Entered Checkout Controller - GET method
-16-12-2015 19:07:37 com.wpl.controller.OrderHistoryController.getLoginPage(OrderHistoryController.java:23) - Entered Order Controller - GET method
-16-12-2015 19:07:38 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
-16-12-2015 19:07:39 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
-16-12-2015 19:07:39 com.wpl.controller.HomeController.getLoginPage(HomeController.java:27) - Entered Login Controller - GET method
-16-12-2015 19:07:41 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
-16-12-2015 19:08:06 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
-16-12-2015 19:08:11 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
-16-12-2015 19:08:11 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
-16-12-2015 19:08:17 com.wpl.controller.OrderHistoryController.getLoginPage(OrderHistoryController.java:23) - Entered Order Controller - GET method
-16-12-2015 19:08:18 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
-16-12-2015 19:08:18 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
+17-12-2015 12:40:32 com.wpl.controller.LoginController.getLoginPage(LoginController.java:31) - Entered Login Controller - GET method
+17-12-2015 12:40:35 com.wpl.controller.LoginController.checkLogin(LoginController.java:41) - Login Controller POST
+17-12-2015 12:40:35 com.wpl.DAO.LoginDAO.checkLoginDAO(LoginDAO.java:39) - Check: Gohan
+17-12-2015 12:40:35 com.wpl.controller.LoginController.checkLogin(LoginController.java:47) - User Validated Successfully
+17-12-2015 12:40:37 com.wpl.controller.CheckoutController.getLoginPage(CheckoutController.java:40) - Entered Checkout Controller - GET method
+17-12-2015 12:40:37 com.wpl.controller.JSONControllers.searchProd(JSONControllers.java:42) - Product Controller POST
+17-12-2015 12:40:40 com.wpl.controller.HomeController.getLoginPage(HomeController.java:27) - Entered Login Controller - GET method
+17-12-2015 12:40:41 com.wpl.controller.CheckoutController.getLoginPage(CheckoutController.java:40) - Entered Checkout Controller - GET method
+17-12-2015 12:40:43 com.wpl.controller.HomeController.getLoginPage(HomeController.java:27) - Entered Login Controller - GET method
+17-12-2015 12:40:43 com.wpl.controller.JSONControllers.searchProd(JSONControllers.java:42) - Product Controller POST
+17-12-2015 12:40:46 com.wpl.controller.CheckoutController.getLoginPage(CheckoutController.java:40) - Entered Checkout Controller - GET method
+17-12-2015 12:40:47 com.wpl.controller.HomeController.getLoginPage(HomeController.java:27) - Entered Login Controller - GET method
+17-12-2015 12:40:47 com.wpl.controller.JSONControllers.searchProd(JSONControllers.java:42) - Product Controller POST
+17-12-2015 12:40:48 com.wpl.controller.ProductController.getLoginPage(ProductController.java:28) - Entered Product Controller - GET method
+17-12-2015 12:40:48 com.wpl.controller.JSONControllers.searchProd(JSONControllers.java:42) - Product Controller POST
