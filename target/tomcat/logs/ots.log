@@ -1,3 +1,15 @@
-16-12-2015 18:22:13 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
-16-12-2015 18:22:23 com.wpl.controller.HomeController.getLoginPage(HomeController.java:27) - Entered Login Controller - GET method
-16-12-2015 18:22:25 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
+16-12-2015 18:55:49 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
+16-12-2015 18:55:49 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
+16-12-2015 19:07:35 com.wpl.controller.OrderHistoryController.getLoginPage(OrderHistoryController.java:23) - Entered Order Controller - GET method
+16-12-2015 19:07:36 com.wpl.controller.CheckoutController.getLoginPage(CheckoutController.java:23) - Entered Checkout Controller - GET method
+16-12-2015 19:07:37 com.wpl.controller.OrderHistoryController.getLoginPage(OrderHistoryController.java:23) - Entered Order Controller - GET method
+16-12-2015 19:07:38 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
+16-12-2015 19:07:39 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
+16-12-2015 19:07:39 com.wpl.controller.HomeController.getLoginPage(HomeController.java:27) - Entered Login Controller - GET method
+16-12-2015 19:07:41 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
+16-12-2015 19:08:06 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
+16-12-2015 19:08:11 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
+16-12-2015 19:08:11 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
+16-12-2015 19:08:17 com.wpl.controller.OrderHistoryController.getLoginPage(OrderHistoryController.java:23) - Entered Order Controller - GET method
+16-12-2015 19:08:18 com.wpl.controller.ProductController.getLoginPage(ProductController.java:32) - Entered Product Controller - GET method
+16-12-2015 19:08:18 com.wpl.DAO.ProductDAO.getProdDAO(ProductDAO.java:37) - Prod Name: bag Price: 20
