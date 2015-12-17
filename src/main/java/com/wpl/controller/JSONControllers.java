@@ -53,7 +53,7 @@ private static final Logger log = Logger.getLogger(LoginController.class);
 		return user;
 	}
 	
-	@RequestMapping(value="/user", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/order", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody List<Order> getOrderHistory(HttpSession session){
 		
 		log.info("Product Controller POST");
