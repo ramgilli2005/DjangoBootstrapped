@@ -23,7 +23,7 @@ private static final Logger log = Logger.getLogger(LoginController.class);
 	@Autowired
 	ProductDAO dao;
 	
-	@RequestMapping(value="/prod_search", method = RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/prod_search", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody List<Product> searchProd(@RequestBody Product product){
 		
 		log.info("Product Controller POST");
