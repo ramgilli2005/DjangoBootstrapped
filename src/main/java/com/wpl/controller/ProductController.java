@@ -1,11 +1,12 @@
 package com.wpl.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -30,7 +31,7 @@ public class ProductController {
 		
 		log.info("Entered Product Controller - GET method");
 		// Add values to model to be accessed in the JSP page
-		Product products = dao.getProdDAO();
+		List<Product> products = dao.getProdDAO();
 		model.addAttribute("products", products);
 		// Return the name of the JSP page to be displayed
 		return "products";

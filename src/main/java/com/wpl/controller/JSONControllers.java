@@ -1,7 +1,6 @@
 package com.wpl.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +24,10 @@ private static final Logger log = Logger.getLogger(LoginController.class);
 	ProductDAO dao;
 	
 	@RequestMapping(value="/prod_search", method = RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody Product searchProd(@RequestBody Product product){
+	public @ResponseBody List<Product> searchProd(@RequestBody Product product){
 		
 		log.info("Product Controller POST");
-		Product products = dao.getProdDAO(product);
+		List<Product> products = dao.getProducts(product);
 
 		return products;
 	}

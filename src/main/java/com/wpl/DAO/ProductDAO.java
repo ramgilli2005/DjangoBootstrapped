@@ -1,5 +1,7 @@
 package com.wpl.DAO;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -27,20 +29,24 @@ public class ProductDAO implements ServiceConstants{
 		header.add("Authorization", authHeader);
 	}
 	
-	public Product getProdDAO(){
+	public List<Product> getProdDAO(){
 		HttpEntity entity = new HttpEntity(null, header);
-		Product prod = rt.postForObject(SERVICE_URI+PRODUCT_SEARCH, entity, Product.class);
-		log.info("Prod Name: "+prod.getProductName() +" Price: "+prod.getProductPrice());
-		prod.setProductImg(prod.getProductName().toLowerCase().concat(".jpg"));
-		return prod;
+		List<Product> prodList = rt.postForObject(SERVICE_URI+PRODUCT_SEARCH, entity, List.class);
+		log.info("Prod Name: "+prodList.get(0).getProductName() +" Price: "+prodList.get(0).getProductPrice());
+		for(Product prod : prodList){
+			prod.setProductImg(prod.getProductName().toLowerCase().concat(".jpg"));
+		}
+		return prodList;
 	}
 	
-	public Product getProducts(Product p){
+	public List<Product> getProducts(Product p){
 
 		HttpEntity entity = new HttpEntity(p, header);
-		Product prod = rt.postForObject(SERVICE_URI+PRODUCT_SEARCH, entity, Product.class);
-		log.info("Prod Name: "+prod.getProductName() +" Price: "+prod.getProductPrice());
-		prod.setProductImg(prod.getProductName().toLowerCase().concat(".jpg"));
-		return prod;
+		List<Product> prodList = rt.postForObject(SERVICE_URI+PRODUCT_SEARCH, entity, List.class);
+		log.info("Prod Name: "+prodList.get(0).getProductName() +" Price: "+prodList.get(0).getProductPrice());
+		for(Product prod : prodList){
+			prod.setProductImg(prod.getProductName().toLowerCase().concat(".jpg"));
+		}
+		return prodList;
 	}
 }
